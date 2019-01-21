@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/my_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/colorPrimary"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+            <LinearLayout
+
+                android:paddingTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+
+                    android:layout_weight="1"
+                    android:textSize="12dp"
+                    android:id="@+id/rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:text="Gravar" />
+
+                <Button
+
+                    android:layout_weight="1"
+                    android:textSize="12dp"
+                    android:id="@+id/stopRec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:enabled="false"
+                    android:text="Stop Rec" />
+
+            </LinearLayout>
+
+            <TextView
+                android:textSize="24dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:gravity="center"
+                android:text="Lista de Audios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_marginBottom="24dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:id="@+id/textViewRecording"
+            android:textSize="36dp"
+            android:text="Recording..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
